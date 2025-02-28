@@ -6,20 +6,20 @@ import 'company_model_4.dart';
 import 'crypto_model_1.dart';
 
 class UserModel {
-  List<AddressModel> address;
+  AddressModel address;
   int age;
-  List<BankModel> bank;
+  BankModel bank;
   String birthDate;
   String bloodGroup;
-  List<CompanyModel> company;
-  List<CryptoModel> crypto;
+  CompanyModel company;
+  CryptoModel crypto;
   String ein;
   String email;
   String eyeColor;
   String firstName;
   String gender;
-  List<HairModel> hair;
-  int height;
+  HairModel hair;
+  double height;
   int id;
   String image;
   String ip;
@@ -33,7 +33,7 @@ class UserModel {
   String university;
   String userAgent;
   String username;
-  int weight;
+  double weight;
 
   UserModel({
     required this.address,
@@ -68,53 +68,24 @@ class UserModel {
 
 
   factory UserModel.fromJson(Map<String, dynamic> json){
-    List<AddressModel> mAddress=[];
-    List<BankModel> mBank=[];
-    List<CompanyModel> mCompany=[];
-    List<CryptoModel> mCrypto=[];
-    List<HairModel> mHair=[];
-
-    for(Map<String,dynamic> eachAdress in json["address"]){
-
-      mAddress.add(AddressModel.fromJson(eachAdress));
-
-    }
-
-    for(Map<String,dynamic> eachBank in json["bank"]){
-      mBank.add(BankModel.fromJson(eachBank));
-
-    }
-    for(Map<String,dynamic> eachCompany in json["company"]){
-      mCompany.add(CompanyModel.fromJson(eachCompany));
-
-    }
-    for(Map<String,dynamic> eachCrypto in json["crypto"]){
-      mCrypto.add(CryptoModel.fromJson(eachCrypto));
-
-    }
-    for(Map<String,dynamic> eachHair in json["hair"]){
-      mHair.add(HairModel.fromJson(eachHair));
-
-    }
-
 
     return UserModel(
-        address: mAddress,
+        address: AddressModel.fromJson(json["address"]),
         id: json["id"],
         email: json["email"],
         gender: json["gender"],
         height: json["height"],
         password: json["password"],
         age: json["age"],
-        bank: mBank,
+        bank: BankModel.fromJson(json["bank"],),
         birthDate: json["birthDate"],
         bloodGroup: json["bloodGroup"],
-        company: mCompany,
-        crypto: mCrypto,
+        company: CompanyModel.fromJson(json["company"]),
+        crypto: CryptoModel.fromJson(json["crypto"]),
         ein: json["ein"],
         eyeColor: json["eyeColor"],
         firstName: json["firstName"],
-        hair: mHair,
+        hair:HairModel.fromJson( json["hair"]),
         image: json["image"],
         ip: json["ip"],
         lastName: json["lastName"],

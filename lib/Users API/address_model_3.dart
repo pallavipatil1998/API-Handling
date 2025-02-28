@@ -7,7 +7,7 @@ class AddressModel{
   String postalCode;
   String state;
   String stateCode;
-  List<CoordinatesModel> coordinates=[];
+  CoordinatesModel coordinates ;
 
   AddressModel({
     required this.address,
@@ -21,10 +21,6 @@ class AddressModel{
 
 
   factory AddressModel.fromJson(Map<String,dynamic> json){
-    List<CoordinatesModel> mCoordinates=[];
-    for(Map<String,dynamic>eachCoordinate in json["coordinates"]){
-      mCoordinates.add(CoordinatesModel.fromJson(eachCoordinate));
-    }
 
     return AddressModel(
         address: json["address"],
@@ -33,7 +29,7 @@ class AddressModel{
         state: json["state"],
         postalCode: json["postalCode"],
         stateCode: json["stateCode"],
-        coordinates: mCoordinates
+        coordinates: CoordinatesModel.fromJson(json["coordinates"]),
     );
   }
 
