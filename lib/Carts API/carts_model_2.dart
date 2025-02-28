@@ -1,10 +1,10 @@
-import 'package:api_handling/Carts%20API/category_model_1.dart';
+import 'package:api_handling/Carts%20API/products_model_1.dart';
 
 class CartsModel{
   int  id;
   int userId ;
-  int discountedTotal ;
-  int total;
+  double discountedTotal ;
+  double total;
   int  totalProducts;
   int totalQuantity;
   List<ProductsModel> products;

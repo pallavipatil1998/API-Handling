@@ -1,10 +1,10 @@
 class ProductsModel{
   int id;
-  int price;
+  double price;
   int quantity;
-  int total;
-  int discountPercentage;
-  int discountedTotal;
+  double total;
+  double discountPercentage;
+  double discountedTotal;
   String title;
   String thumbnail;
 
