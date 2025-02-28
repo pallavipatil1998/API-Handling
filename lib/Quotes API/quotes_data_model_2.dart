@@ -1,4 +1,4 @@
-import 'package:api_handling/quotes_model_1.dart';
+import 'package:api_handling/Quotes%20API/quotes_model_1.dart';
 
 class QuotesDataModel {
   int limit;
