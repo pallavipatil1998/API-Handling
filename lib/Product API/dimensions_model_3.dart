@@ -1,7 +1,7 @@
 class DimensionsModel {
-  int depth;
-  int height;
-  int width;
+  double depth;
+  double height;
+  double width;
 
 
   DimensionsModel({

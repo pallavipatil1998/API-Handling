@@ -8,14 +8,14 @@ class ProductModel {
   String brand;
   String category;
   String description;
-  List<DimensionsModel> dimensions;
-  int discountPercentage;
+  DimensionsModel dimensions;
+  double discountPercentage;
   int id;
   List<String> images;
-  List<MetaModel> meta;
+  MetaModel meta;
   int minimumOrderQuantity;
-  int price;
-  int rating;
+  double price;
+  double rating;
   String returnPolicy;
   List<ReviewsModel> reviews;
   String shippingInformation;
@@ -56,17 +56,11 @@ class ProductModel {
 
   factory ProductModel.fromJson(Map<String, dynamic> json){
     List<ReviewsModel> mReview=[];
-    List<MetaModel> mMeta=[];
-    List<DimensionsModel> mDimension=[];
+    
     for(Map<String,dynamic> eachReviews in json["reviews"]){
       mReview.add(ReviewsModel.fromJson(eachReviews));
     }
-    for(Map<String,dynamic> eachMeta in json["meta"]){
-      mMeta.add(MetaModel.fromJson(eachMeta));
-    }
-    for(Map<String,dynamic> eachDimension in json["dimensions"]){
-      mDimension.add(DimensionsModel.fromJson(eachDimension));
-    }
+   
 
 
     return ProductModel(
@@ -81,10 +75,10 @@ class ProductModel {
         availabilityStatus: json["availabilityStatus"],
         brand: json["brand"],
         category: json["category"],
-        dimensions: mDimension,
+        dimensions: DimensionsModel.fromJson(json["dimensions"]),
         //prblm
         images: json["images"],
-        meta: mMeta,
+        meta: MetaModel.fromJson(json["meta"]),
         minimumOrderQuantity: json["minimumOrderQuantity"],
         returnPolicy: json["returnPolicy"],
         reviews: mReview,
