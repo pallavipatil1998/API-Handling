@@ -1,10 +1,10 @@
 class ReactionsModel {
-  int dislikes;
-  int likes;
+  int? dislikes;
+  int? likes;
 
   ReactionsModel({
-    required this.dislikes,
-    required this.likes
+     this.dislikes,
+     this.likes
   });
 
 

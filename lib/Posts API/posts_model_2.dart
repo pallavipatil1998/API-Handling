@@ -1,23 +1,23 @@
 import 'package:api_handling/Posts%20API/reactions_model_1.dart';
 
 class PostsModel {
-  String body;
-  int id;
-  String title;
-  int userId;
-  int views;
-  ReactionsModel reactions;
-  List<String> tags;
+  String? body;
+  int? id;
+  String? title;
+  int? userId;
+  int? views;
+  ReactionsModel? reactions;
+  List<dynamic>? tags;
 
 
   PostsModel({
-    required this.body,
-    required this.id,
-    required this.title,
-    required this.userId,
-    required this.views,
-    required this.reactions,
-    required this.tags,
+     this.body,
+     this.id,
+     this.title,
+     this.userId,
+     this.views,
+     this.reactions,
+     this.tags,
   });
 
 
@@ -30,7 +30,6 @@ class PostsModel {
         views:  json["views"],
         reactions: ReactionsModel.fromJason(json["reactions"]),
         tags:  json["tags"]
-        // tags:  json["tags"].cast<String>(),
     );
   }
 
