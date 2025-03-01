@@ -76,7 +76,6 @@ class ProductModel {
         brand: json["brand"],
         category: json["category"],
         dimensions: DimensionsModel.fromJson(json["dimensions"]),
-        //prblm
         images: json["images"],
         meta: MetaModel.fromJson(json["meta"]),
         minimumOrderQuantity: json["minimumOrderQuantity"],
@@ -85,7 +84,6 @@ class ProductModel {
         shippingInformation: json["shippingInformation"],
         sku: json["sku"],
         stock: json["stock"],
-        //prblm
         tags: json["tags"],
         warrantyInformation: json["warrantyInformation"]
     );

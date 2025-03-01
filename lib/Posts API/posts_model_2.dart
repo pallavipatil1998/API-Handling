@@ -29,9 +29,8 @@ class PostsModel {
         userId:  json["userId"],
         views:  json["views"],
         reactions: ReactionsModel.fromJason(json["reactions"]),
-
-        //prblm
         tags:  json["tags"]
+        // tags:  json["tags"].cast<String>(),
     );
   }
 
