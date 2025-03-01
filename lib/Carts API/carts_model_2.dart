@@ -1,23 +1,23 @@
 import 'package:api_handling/Carts%20API/products_model_1.dart';
 
 class CartsModel{
-  int  id;
-  int userId ;
-  double discountedTotal ;
-  double total;
-  int  totalProducts;
-  int totalQuantity;
-  List<ProductsModel> products;
+  int?  id;
+  int? userId ;
+  num? discountedTotal ;
+  num? total;
+  int?  totalProducts;
+  int? totalQuantity;
+  List<ProductsModel>? products;
 
 
   CartsModel({
-    required this.id,
-    required this.userId,
-    required this.discountedTotal,
-    required this.total,
-    required this.totalProducts,
-    required this.totalQuantity,
-    required this.products,
+     this.id,
+     this.userId,
+     this.discountedTotal,
+     this.total,
+     this.totalProducts,
+     this.totalQuantity,
+     this.products,
 
 
 });

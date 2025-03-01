@@ -1,17 +1,17 @@
 import 'package:api_handling/Carts%20API/carts_model_2.dart';
 
 class MainCartModel{
-  int limit;
-  int skip;
-  int total;
-  List<CartsModel> carts;
+  int? limit;
+  int? skip;
+  int? total;
+  List<CartsModel>? carts;
 
 
   MainCartModel({
-    required this.limit,
-    required this.skip,
-    required this.total,
-    required this.carts
+     this.limit,
+     this.skip,
+     this.total,
+     this.carts
 
 });
 
