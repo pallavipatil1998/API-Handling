@@ -2,19 +2,19 @@ import 'package:api_handling/Carts%20API/carts_model_2.dart';
 import 'package:api_handling/Comments%20API/use_model_1.dart';
 
 class ComentsModel {
-  String body;
-  int id;
-  int likes;
-  int postId;
-  UserModel user;
+  String? body;
+  int? id;
+  int? likes;
+  int? postId;
+  UserModel? user;
 
 
   ComentsModel({
-    required this.body,
-    required this.id,
-    required this.likes,
-    required this.postId,
-    required this.user,
+     this.body,
+     this.id,
+     this.likes,
+     this.postId,
+     this.user,
   });
 
 

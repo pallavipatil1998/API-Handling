@@ -1,12 +1,12 @@
 class UserModel{
-  String fullName;
-  String username;
-  int id;
+  String? fullName;
+  String? username;
+  int? id;
 
   UserModel({
-    required this.fullName,
-    required this.username,
-    required this.id
+     this.fullName,
+     this.username,
+     this.id
 });
 
 
