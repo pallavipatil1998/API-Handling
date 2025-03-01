@@ -38,11 +38,57 @@ class _ProductHomeState extends State<ProductHome> {
                   itemCount: snapshot.data!.products!.length,
                     itemBuilder: (ctx,index){
                     var mdata=snapshot.data!.products![index];
-                      return ListTile(
-                        leading:Text("${snapshot.data!.products![index].id}") ,
-                        title:Text(snapshot.data!.products![index].title!) ,
-                        subtitle:Text(mdata.category!) ,
-                       trailing:Text("${mdata.price}")  ,
+                      return Column(
+                        children: [
+                          ListView.builder(
+                              shrinkWrap: true,
+                              physics: NeverScrollableScrollPhysics(),
+                              itemCount: mdata.images!.length,
+                              itemBuilder: (ctx,imgindex){
+                                return Card(
+                                    borderOnForeground: true,
+                                    color: Colors.blue.shade100,
+                                    child: Image.network(mdata.images![imgindex],width: 250,height: 250,));
+
+                              }
+                          ),
+                          ListTile(
+                            leading:Text("${mdata.id}") ,
+                            title:Text(mdata.title!,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),) ,
+                            subtitle:Column(
+                              children: [
+                                Text(mdata.description!),
+                                Text(mdata.category!),
+                                Text("Width:${mdata.dimensions!.width}"),
+                                Text("height:${mdata.dimensions!.height}"),
+                                Text("Created: ${mdata.meta!.createdAt}"),
+                              ],
+                            ) ,
+                           trailing:Text("Price: ${mdata.price}")  ,
+                          ),
+                          ListView.builder(
+                            shrinkWrap: true,
+                            physics: NeverScrollableScrollPhysics(),
+                            itemCount:mdata.reviews!.length ,
+                              itemBuilder: (ctx,rindex){
+                                return ListTile(
+                                  title: Column(
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Text("Ratings *: ${mdata.reviews![rindex].rating}"),
+                                          Text("  Name : ${mdata.reviews![rindex].reviewerName}"),
+
+                                        ],
+                                      ),
+                                      Text("Comment : ${mdata.reviews![rindex].comment}"),
+                                    ],
+                                  ),
+                                );
+                              }
+                          ),
+
+                        ],
                       );
                     }
                 );
