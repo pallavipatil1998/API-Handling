@@ -1,17 +1,17 @@
 class ReviewsModel {
-  String comment;
-  String date;
-  int rating;
-  String reviewerEmail;
-  String reviewerName;
+  String? comment;
+  String? date;
+  int? rating;
+  String? reviewerEmail;
+  String? reviewerName;
 
 
   ReviewsModel({
-    required this.comment,
-    required this.date,
-    required this.rating,
-    required this.reviewerEmail,
-    required this.reviewerName,
+     this.comment,
+     this.date,
+     this.rating,
+     this.reviewerEmail,
+     this.reviewerName,
   });
 
 

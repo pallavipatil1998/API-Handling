@@ -4,53 +4,53 @@ import 'dimensions_model_3.dart';
 import 'meta_model_1.dart';
 
 class ProductModel {
-  String availabilityStatus;
-  String brand;
-  String category;
-  String description;
-  DimensionsModel dimensions;
-  double discountPercentage;
-  int id;
-  List<String> images;
-  MetaModel meta;
-  int minimumOrderQuantity;
-  double price;
-  double rating;
-  String returnPolicy;
-  List<ReviewsModel> reviews;
-  String shippingInformation;
-  String sku;
-  int stock;
-  List<String> tags;
-  String thumbnail;
-  String title;
-  String warrantyInformation;
-  int weight;
+  String? availabilityStatus;
+  String? brand;
+  String? category;
+  String? description;
+  DimensionsModel? dimensions;
+  num? discountPercentage;
+  int? id;
+  List<dynamic>? images;
+  MetaModel? meta;
+  int? minimumOrderQuantity;
+  num? price;
+  num? rating;
+  String? returnPolicy;
+  List<ReviewsModel>? reviews;
+  String? shippingInformation;
+  String? sku;
+  int? stock;
+  List<dynamic>? tags;
+  String? thumbnail;
+  String? title;
+  String? warrantyInformation;
+  int? weight;
 
 
   ProductModel({
-    required this.rating,
-    required this.weight,
-    required this.id,
-    required this.title,
-    required this.thumbnail,
-    required this.discountPercentage,
-    required this.price,
-    required this.description,
-    required this.availabilityStatus,
-    required this.brand,
-    required this.category,
-    required this.dimensions,
-    required this.images,
-    required this.meta,
-    required this.minimumOrderQuantity,
-    required this.returnPolicy,
-    required this.reviews,
-    required this.shippingInformation,
-    required this.sku,
-    required this.stock,
-    required this.tags,
-    required this.warrantyInformation,
+     this.rating,
+     this.weight,
+     this.id,
+     this.title,
+     this.thumbnail,
+     this.discountPercentage,
+     this.price,
+     this.description,
+     this.availabilityStatus,
+     this.brand,
+     this.category,
+     this.dimensions,
+     this.images,
+     this.meta,
+     this.minimumOrderQuantity,
+     this.returnPolicy,
+     this.reviews,
+     this.shippingInformation,
+     this.sku,
+     this.stock,
+     this.tags,
+     this.warrantyInformation,
   });
 
 
@@ -76,7 +76,7 @@ class ProductModel {
         brand: json["brand"],
         category: json["category"],
         dimensions: DimensionsModel.fromJson(json["dimensions"]),
-        images: json["images"],
+        images:  json["images"],
         meta: MetaModel.fromJson(json["meta"]),
         minimumOrderQuantity: json["minimumOrderQuantity"],
         returnPolicy: json["returnPolicy"],

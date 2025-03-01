@@ -1,13 +1,13 @@
 class DimensionsModel {
-  double depth;
-  double height;
-  double width;
+  num? depth;
+  num? height;
+  num? width;
 
 
   DimensionsModel({
-    required this.height,
-    required this.width,
-    required this.depth
+     this.height,
+     this.width,
+     this.depth
   });
 
   factory DimensionsModel.fromJson(Map<String,dynamic>json){

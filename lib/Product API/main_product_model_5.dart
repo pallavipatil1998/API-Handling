@@ -1,18 +1,18 @@
 import 'package:api_handling/Product%20API/product_model_4.dart';
 
 class MainProductModel {
-  int limit;
-  int skip;
+  int? limit;
+  int? skip;
 
-  int total;
-  List<ProductModel> products;
+  int? total;
+  List<ProductModel>? products;
 
 
   MainProductModel({
-    required this.total,
-    required this.skip,
-    required this.limit,
-    required this.products
+     this.total,
+     this.skip,
+     this.limit,
+     this.products
   });
 
   factory MainProductModel.fromJson(Map<String, dynamic>json){

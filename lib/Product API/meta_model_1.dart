@@ -1,14 +1,15 @@
 class MetaModel {
-  String barcode;
-  String createdAt;
-  String qrCode;
-  String updatedAt;
+  String? barcode;
+  String? createdAt;
+  String? qrCode;
+  String? updatedAt;
 
   MetaModel(
-      {required this.barcode,
-      required this.createdAt,
-      required this.qrCode,
-      required this.updatedAt});
+      {
+        this.barcode,
+       this.createdAt,
+       this.qrCode,
+       this.updatedAt});
 
   factory MetaModel.fromJson(Map<String, dynamic> json) {
     return MetaModel(
