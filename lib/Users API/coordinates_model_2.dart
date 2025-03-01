@@ -1,12 +1,12 @@
 import 'dart:ffi';
 
 class CoordinatesModel{
-  double lat;
-  double lng;
+  num? lat;
+  num? lng;
 
   CoordinatesModel({
-    required this.lat,
-    required this.lng
+     this.lat,
+     this.lng
 });
 
 

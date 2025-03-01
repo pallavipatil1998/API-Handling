@@ -1,17 +1,17 @@
 class BankModel {
-  String cardExpire;
-  String cardNumber;
-  String cardType;
+  String? cardExpire;
+  String? cardNumber;
+  String? cardType;
 
-  String currency;
-  String iban;
+  String? currency;
+  String? iban;
 
   BankModel({
-    required this.cardExpire,
-    required this.cardNumber,
-    required this.cardType,
-    required this.currency,
-    required this.iban,
+     this.cardExpire,
+     this.cardNumber,
+     this.cardType,
+     this.currency,
+     this.iban,
   });
 
   factory BankModel.fromJson(Map<String, dynamic> json) {

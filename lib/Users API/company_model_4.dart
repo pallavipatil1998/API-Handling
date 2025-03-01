@@ -1,16 +1,16 @@
 import 'package:api_handling/Users%20API/address_model_3.dart';
 
 class CompanyModel{
-  String department;
-  String name;
-  String title;
-  AddressModel address;
+  String? department;
+  String? name;
+  String? title;
+  AddressModel? address;
 
   CompanyModel({
-    required this.department,
-    required this.name,
-    required this.title,
-    required this.address,
+     this.department,
+     this.name,
+     this.title,
+     this.address,
 
 });
 

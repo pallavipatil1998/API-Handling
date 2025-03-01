@@ -1,12 +1,12 @@
 class CryptoModel{
-  String coin;
-  String network ;
-  String wallet;
+  String? coin;
+  String? network ;
+  String? wallet;
 
   CryptoModel({
-    required this.coin,
-    required this.network,
-    required this.wallet
+     this.coin,
+     this.network,
+     this.wallet
 });
 
   factory CryptoModel.fromJson(Map<String,dynamic> json){

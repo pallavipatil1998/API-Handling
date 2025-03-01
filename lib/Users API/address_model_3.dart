@@ -1,22 +1,22 @@
 import 'package:api_handling/Users%20API/coordinates_model_2.dart';
 
 class AddressModel{
-  String address;
-  String city;
-  String country;
-  String postalCode;
-  String state;
-  String stateCode;
-  CoordinatesModel coordinates ;
+  String? address;
+  String? city;
+  String? country;
+  String? postalCode;
+  String? state;
+  String? stateCode;
+  CoordinatesModel? coordinates ;
 
   AddressModel({
-    required this.address,
-    required this.city,
-    required this.country,
-    required this.state,
-    required this.postalCode,
-    required this.stateCode,
-    required this.coordinates
+     this.address,
+     this.city,
+     this.country,
+     this.state,
+     this.postalCode,
+     this.stateCode,
+     this.coordinates
 });
 
 

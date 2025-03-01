@@ -6,64 +6,64 @@ import 'company_model_4.dart';
 import 'crypto_model_1.dart';
 
 class UserModel {
-  AddressModel address;
-  int age;
-  BankModel bank;
-  String birthDate;
-  String bloodGroup;
-  CompanyModel company;
-  CryptoModel crypto;
-  String ein;
-  String email;
-  String eyeColor;
-  String firstName;
-  String gender;
-  HairModel hair;
-  double height;
-  int id;
-  String image;
-  String ip;
-  String lastName;
-  String macAddress;
-  String maidenName;
-  String password;
-  String phone;
-  String role;
-  String ssn;
-  String university;
-  String userAgent;
-  String username;
-  double weight;
+  AddressModel? address;
+  int? age;
+  BankModel? bank;
+  String? birthDate;
+  String? bloodGroup;
+  CompanyModel? company;
+  CryptoModel? crypto;
+  String? ein;
+  String? email;
+  String? eyeColor;
+  String? firstName;
+  String? gender;
+  HairModel? hair;
+  num? height;
+  int? id;
+  String? image;
+  String? ip;
+  String? lastName;
+  String? macAddress;
+  String? maidenName;
+  String? password;
+  String? phone;
+  String? role;
+  String? ssn;
+  String? university;
+  String? userAgent;
+  String? username;
+  num? weight;
 
   UserModel({
-    required this.address,
-    required this.id,
-    required this.email,
-    required this.gender,
-    required this.height,
-    required this.password,
-    required this.age,
-    required this.bank,
-    required this.birthDate,
-    required this.bloodGroup,
-    required this.company,
-    required this.crypto,
-    required this.ein,
-    required this.eyeColor,
-    required this.firstName,
-    required this.hair,
-    required this.image,
-    required this.ip,
-    required this.lastName,
-    required this.macAddress,
-    required this.maidenName,
-    required this.phone,
-    required this.role,
-    required this.ssn,
-    required this.university,
-    required this.userAgent,
-    required this.username,
-    required this.weight,
+     this.address,
+     this.id,
+     this.email,
+     this.gender,
+     this.height,
+     this.password,
+     this.age,
+     this.bank,
+     this.birthDate,
+     this.bloodGroup,
+     this.company,
+     this.crypto,
+     this.ein,
+     this.eyeColor,
+     this.firstName,
+     this.hair,
+     this.image,
+     this.ip,
+     this.lastName,
+     this.macAddress,
+     this.maidenName,
+     this.phone,
+     this.role,
+     this.ssn,
+     this.university,
+     this.userAgent,
+     this.username,
+     this.weight,
   });
 
 
