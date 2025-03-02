@@ -1,4 +1,3 @@
-import 'dart:ffi';
 
 class CoordinatesModel{
   num? lat;
