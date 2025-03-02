@@ -18,7 +18,7 @@ class _WallpaperHomeState extends State<WallpaperHome> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    data=getWallpaper("nature");
+    data=getWallpaper("lion");
   }
   @override
   Widget build(BuildContext context) {
@@ -65,7 +65,7 @@ class _WallpaperHomeState extends State<WallpaperHome> {
 
 
 Future<MainWallpaperApi> getWallpaper(String query)async{
-  var url= "https://api.pexels.com/v1/search?query=nature&per_page=20";
+  var url= "https://api.pexels.com/v1/search?query=lion&per_page=50";
   var res =await http.get(Uri.parse(url),headers: {"Authorization": "NlGZHi3aoatDlIyXXXvk3UWopet1FftNMCNdy5xXh1iWeRntf8hiBMgZ"});
 
   if(res.statusCode==200){
