@@ -18,7 +18,7 @@ class _WallpaperHomeState extends State<WallpaperHome> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    data=getWallpaper("lion");
+    data=getWallpaper("birds");
   }
   @override
   Widget build(BuildContext context) {
@@ -42,12 +42,12 @@ class _WallpaperHomeState extends State<WallpaperHome> {
                   ),
                   itemCount: snapshot.data!.photos!.length,
                     itemBuilder: (_,index){
-                    var eachImage = snapshot.data!.photos![index].src!.landscape;
+                    var eachImage = snapshot.data!.photos![index].src!.landscape!;
                       return Container(
                        decoration: BoxDecoration(
                          borderRadius: BorderRadius.circular(21),
                          image: DecorationImage(
-                             image: NetworkImage(eachImage!),fit:  BoxFit.fill
+                             image: NetworkImage(eachImage),fit:  BoxFit.fill
                          ),
                        ),
                       );
@@ -65,7 +65,7 @@ class _WallpaperHomeState extends State<WallpaperHome> {
 
 
 Future<MainWallpaperApi> getWallpaper(String query)async{
-  var url= "https://api.pexels.com/v1/search?query=lion&per_page=50";
+  var url= "https://api.pexels.com/v1/search?query=$query&per_page=20";
   var res =await http.get(Uri.parse(url),headers: {"Authorization": "NlGZHi3aoatDlIyXXXvk3UWopet1FftNMCNdy5xXh1iWeRntf8hiBMgZ"});
 
   if(res.statusCode==200){
